@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Cats</title>
+</head>
+<body>
+    <nav>
+        <a href="/new_cat">Add New Cat</a>        
+    </nav>
+    <main>
+        <h1 class="title1">List of Cats</h1>
+        <% for(let idx in cat){ %>
+            <ul>
+                <li>
+                    <a href="/cat/<%= cat[idx]._id %>"><%=cat[idx].breedCat%></a>
+                    <!-- <a href="/cat/edit/<%= cat[idx]._id %>">Editar</a> -->
+                </li>
+            </ul>
+            <% } %>
+    </main>
+</body>
+</html>

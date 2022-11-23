@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Info Cat</title>
+</head>
+<body>
+    <header class="headerContainer">
+        <a class="title1" href="/">Raza de Gato</a>
+    </header>
+    <main class="mainContainer">
+        <section class="container">
+            <h2 class="title2"><%=cat.breedCat%></h2>
+            <ul class="description">
+                <li class="properties">
+                    <h3 class="subtitle">Size</h3><br>
+                    <p class="text"><%=cat.sizeCat%></p><br>
+                </li>
+                <li class="properties">
+                    <h3 class="subtitle">Coat</h3><br>
+                    <p class="text"><%=cat.coatCat%></p><br>
+                </li>
+                <li class="properties">
+                    <h3 class="subtitle">Color</h3><br>
+                    <p class="text"><%=cat.colourCat%></p><br>
+                </li>
+                <div class="properties">
+                    <a href="/cat/edit/<%=cat._id%>">Editar</a>
+                    <form action="/cat/destruir/<%= cat._id %>" method="post">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </ul>
+        </section>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>
